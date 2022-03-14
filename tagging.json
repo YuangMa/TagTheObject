@@ -1,0 +1,62 @@
+[
+    {
+        "name": "createFile",
+        "params": {
+            "filename": "dummyFile",
+            "content": "helloworld",
+            "collaborators": "user2,user3",
+            "owner": "user1"
+        },
+        "returns": {
+            "filename": "1234567890",
+            "fhandle": "dummyFile",
+            "tag": "blue",
+            "collaborators": ["user2","user3"],
+            "owner": "user1",
+	        "status": "success"
+        }
+    },
+    {
+        "name": "updateFile",
+        "params": {
+            "fhandle": "1234567890",
+            "content": "1234567890",
+            "collaborators": "user2,user3",
+            "tag": "purple"
+        },
+        "returns": {
+            "filename": "1234567890",
+            "tag": "blue",
+            "collaborators": ["user2","user3"],
+            "owner": "user1",
+	        "status": "success"
+        }
+    },
+    {
+        "name": "getFile",
+        "params": {
+            "fhandle": "1234567890"
+        },
+        "returns": {
+            "filename": "dummyFile",
+            "content": "helloworld",
+            "tag": "blue",
+            "collaborators": ["user2","user3"],
+            "owner": "user1",
+	        "status": "success"
+        }
+    },
+    {
+        "name": "searchFileByTag",
+        "params": {
+            "tag": "blue"
+        },
+        "returns": {
+            "tagged": [{
+                "fhandle": "1234567890",
+                "filename": "dummyFile"
+            }],
+            "status": "success"
+        }
+    }
+]
